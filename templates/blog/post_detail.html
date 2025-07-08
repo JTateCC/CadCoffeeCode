@@ -1,0 +1,23 @@
+<h1>{{ post.title }}</h1>
+<p>{{ post.content|linebreaks }}</p>
+
+<hr>
+
+<h2>Comments</h2>
+{% for comment in comments %}
+    <div>
+        <strong>{{ comment.name }}</strong> ({{ comment.created_at|date:"Y-m-d H:i" }})
+        <p>{{ comment.body }}</p>
+    </div>
+{% empty %}
+    <p>No comments yet.</p>
+{% endfor %}
+
+<hr>
+
+<h2>Leave a Comment</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
