@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 from django.views.generic.edit import FormMixin
 from django.urls import reverse
 from .models import BlogPost, Comment
@@ -33,3 +33,8 @@ class BlogPostDetailView(FormMixin, DetailView):
             return self.form_valid(form)
         else:
             return self.form_invalid(form)
+
+class BlogPostListView(ListView):
+    model = BlogPost
+
+
