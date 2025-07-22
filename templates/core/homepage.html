@@ -1,25 +1,54 @@
-<!-- Banner -->
-<section class="banner">
-  <h1>Welcome to My Blog & Projects</h1>
-  <p>Code, CAD, and technical deep-dives</p>
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- 👤 About Me -->
+<section class="mb-16 text-center max-w-xl mx-auto">
+  <!-- Tagline -->
+  <p class="text-2xl font-light text-gray-200 mb-4 leading-snug">
+    Engineering clean ideas through code, CAD & caffeine.
+  </p>
+
+
+  <!-- Social Icons -->
+  <div class="flex justify-center space-x-6">
+    <a href="https://github.com/yourusername" target="_blank" class="hover:text-gray-300" aria-label="GitHub">
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.6 1.1.9 1.4.9 1.5 2.3 1.1 2.9.9.1-.7.4-1.1.7-1.3-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.4.1-3 0 0 1-.3 3.3 1.2a11.3 11.3 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.7.1 3a4.9 4.9 0 011.2 3.3c0 4.4-2.8 5.4-5.5 5.7.5.4.8 1 .8 2v3c0 .4.2.7.8.6A12 12 0 0012 .3"></path></svg>
+    </a>
+
+    <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-gray-300" aria-label="LinkedIn">
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.9 3.88 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1 4.98 2.1 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.6-1.1 2-2.2 4.1-2.2 4.4 0 5.2 2.9 5.2 6.6V24h-5V14c0-2.4-.1-5.5-3.4-5.5-3.4 0-3.9 2.6-3.9 5.3V24h-5V8z"></path></svg>
+    </a>
+
+    <a href="https://x.com/yourusername" target="_blank" class="hover:text-gray-300" aria-label="X">
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.66 3H3.34A.34.34 0 003 3.34v17.32c0 .19.15.34.34.34h17.32c.19 0 .34-.15.34-.34V3.34A.34.34 0 0020.66 3zM16.75 17l-2.42-3.57L11 17H9.35l3.6-5.05L9.5 7h2.25l2.1 3.13L16 7h1.65l-3.44 4.88L18.65 17H16.75z"/></svg>
+    </a>
+  </div>
 </section>
 
-<!-- Latest Blog Post Preview -->
-<section class="latest-post">
-  <h2>Latest Post</h2>
+
+
+
+<!-- 📝 Latest Blog Post Preview -->
+<section>
+  <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">Latest Blog Post</h2>
   {% if latest_post %}
-    <h3><a href="{{ latest_post.get_absolute_url }}">{{ latest_post.title }}</a></h3>
-    <p>{{ latest_post.content|truncatewords:40|safe }}</p>
-    <a href="{% url 'blog_home' %}">View All Blog Posts →</a>
+    <article>
+      <h3 class="text-2xl font-semibold mb-2">
+        <a href="{{ latest_post.get_absolute_url }}" class="text-white hover:underline">
+          {{ latest_post.title }}
+        </a>
+      </h3>
+      <p class="text-gray-300 leading-relaxed">
+        {{ latest_post.content|truncatewords:40|safe }}
+      </p>
+      <a href="{% url 'blog_list' %}" class="inline-block mt-4 text-sm text-gray-400 hover:text-white">
+        View All Blog Posts →
+      </a>
+    </article>
   {% else %}
-    <p>No blog posts yet.</p>
+    <p class="text-gray-400">No blog posts yet.</p>
   {% endif %}
 </section>
 
-
-
-<!-- About Me -->
-<section class="about-me">
-  <h2>About Me</h2>
-  <p>{{ about_text }}</p>
-</section>
+{% endblock %}

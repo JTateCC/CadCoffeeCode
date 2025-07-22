@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="space-y-10">
+    <h1 class="text-2xl font-bold mb-6">All Blog Posts</h1>
+    {% for post in posts %}
+      <article class="bg-white bg-opacity-5 p-6 rounded-lg shadow">
+        <h2 class="text-xl font-semibold mb-2">
+          <a href="{{ post.get_absolute_url }}" class="hover:underline text-white">
+            {{ post.title }}
+          </a>
+        </h2>
+        <p class="text-sm text-gray-300 mb-4">{{ post.created_at|date:"F j, Y" }}</p>
+        <p class="text-gray-200">{{ post.content|truncatewords:30|safe }}</p>
+      </article>
+    {% empty %}
+      <p class="text-gray-300">No posts yet.</p>
+    {% endfor %}
+  </section>
+{% endblock %}

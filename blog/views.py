@@ -36,5 +36,7 @@ class BlogPostDetailView(FormMixin, DetailView):
 
 class BlogPostListView(ListView):
     model = BlogPost
+    context_object_name = "posts"     # optional, otherwise it's "object_list"
+    ordering = ["-created_at"]
 
 

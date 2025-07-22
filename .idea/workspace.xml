@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de2b6e1a-6d32-41ff-846e-7bd2d29869bc" name="Changes" comment="Create a core app for homepage and other non sub folder content">
+      <change afterPath="$PROJECT_DIR$/static/core/banner_image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/core/icon_image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/blogpost_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codeCadCoffee/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/codeCadCoffee/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codeCadCoffee/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/codeCadCoffee/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/static/css/dist/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static/css/dist/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +52,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programming\Projects\CodeCadCoffee\static\core" />
       <recent name="C:\Programming\Projects\CodeCadCoffee\templates\core" />
       <recent name="C:\Programming\Projects\CodeCadCoffee" />
     </key>

@@ -1,23 +1,57 @@
-<h1>{{ post.title }}</h1>
-<p>{{ post.content|linebreaks }}</p>
+{% extends "base.html" %}
 
-<hr>
+{% block content %}
+<article class="prose prose-invert prose-lg max-w-none text-gray-100">
+  <h1 class="text-3xl font-bold mb-4">{{ post.title }}</h1>
+  <div class="text-sm text-gray-400 mb-6">
+    Posted on {{ post.created_at|date:"F j, Y" }}
+  </div>
 
-<h2>Comments</h2>
-{% for comment in comments %}
-    <div>
-        <strong>{{ comment.name }}</strong> ({{ comment.created_at|date:"Y-m-d H:i" }})
-        <p>{{ comment.body }}</p>
-    </div>
-{% empty %}
-    <p>No comments yet.</p>
-{% endfor %}
+  <div class="space-y-6">
+    {{ post.content|linebreaks }}
+  </div>
+</article>
 
-<hr>
+<hr class="my-10 border-gray-600">
 
-<h2>Leave a Comment</h2>
-<form method="post">
+<section class="mt-12">
+  <h2 class="text-2xl font-semibold mb-4">Comments</h2>
+  <div class="space-y-6">
+    {% for comment in comments %}
+      <div class="bg-white bg-opacity-5 p-4 rounded-lg">
+        <div class="text-sm text-gray-300 mb-1">
+          <strong class="text-white">{{ comment.name }}</strong>
+          • {{ comment.created_at|date:"F j, Y, H:i" }}
+        </div>
+        <p class="text-gray-100">{{ comment.body }}</p>
+      </div>
+    {% empty %}
+      <p class="text-gray-400">No comments yet.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<hr class="my-10 border-gray-600">
+
+<section class="mt-12">
+  <h2 class="text-2xl font-semibold mb-4">Leave a Comment</h2>
+  <form method="post" class="space-y-4 bg-white bg-opacity-5 p-6 rounded-lg">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-</form>
+    <div>
+      {{ form.name.label_tag }}
+      {{ form.name }}
+    </div>
+    <div>
+      {{ form.email.label_tag }}
+      {{ form.email }}
+    </div>
+    <div>
+      {{ form.body.label_tag }}
+      {{ form.body }}
+    </div>
+    <button type="submit" class="mt-4 px-4 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200">
+      Submit
+    </button>
+  </form>
+</section>
+{% endblock %}

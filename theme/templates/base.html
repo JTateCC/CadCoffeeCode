@@ -1,20 +1,67 @@
-{% load static tailwind_tags %}
+{% load static %}
+{% load django_browser_reload %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Django Tailwind</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% tailwind_css %}
+  <meta charset="UTF-8">
+  <title>{% block title %} Code | CAD | Coffee {% endblock %}</title>
+  <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
+  {% django_browser_reload_script %}
 </head>
+<body class="min-h-screen flex flex-col bg-gradient-to-b from-gray-200 via-gray-600 to-black text-white">
 
-<body class="bg-gray-50 text-black font-serif leading-normal tracking-normal">
+  <!-- 🔝 Navigation -->
+  <nav class="bg-black/70 backdrop-blur-sm border-b border-gray-700">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-3 text-white hover:text-gray-300">
+        <img src="{% static 'core/icon_image.png' %}" alt="Logo" class="h-6 w-6">
+        <span class="text-lg font-semibold tracking-wide">Code | CAD | Coffee</span>
+      </a>
+      <div class="space-x-6 text-sm">
+        <a href="/" class="text-gray-300 hover:text-white">Home</a>
+        <a href="/blog/" class="text-gray-300 hover:text-white">Blog</a>
+        <a href="/projects/" class="text-gray-300 hover:text-white">Projects</a>
+      </div>
+    </div>
+  </nav>
 
-<div class="container mx-auto">
-    <section class="flex items-center justify-center h-screen">
-        <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-    </section>
-</div>
+  <!-- 🔽 Page Content -->
+  <main class="flex-grow container mx-auto px-6 py-10 max-w-4xl">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer class="bg-black border-t border-gray-800 py-6 text-center text-xs text-gray-500">
+  <div class="flex justify-center space-x-4 mb-3">
+
+    <!-- GitHub -->
+    <a href="https://github.com/yourusername" target="_blank" class="hover:text-gray-300" aria-label="GitHub">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.6 1.1.9 1.4.9 1.5 2.3 1.1 2.9.9.1-.7.4-1.1.7-1.3-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.4.1-3 0 0 1-.3 3.3 1.2a11.3 11.3 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.7.1 3a4.9 4.9 0 011.2 3.3c0 4.4-2.8 5.4-5.5 5.7.5.4.8 1 .8 2v3c0 .4.2.7.8.6A12 12 0 0012 .3z"/>
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-gray-300" aria-label="LinkedIn">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.9 3.88 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1 4.98 2.1 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.6-1.1 2-2.2 4.1-2.2 4.4 0 5.2 2.9 5.2 6.6V24h-5V14c0-2.4-.1-5.5-3.4-5.5-3.4 0-3.9 2.6-3.9 5.3V24h-5V8z"/>
+      </svg>
+    </a>
+
+    <!-- X (formerly Twitter) -->
+    <a href="https://x.com/yourusername" target="_blank" class="hover:text-gray-300" aria-label="X">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <path d="M20.66 3H3.34A.34.34 0 003 3.34v17.32c0 .19.15.34.34.34h17.32c.19 0 .34-.15.34-.34V3.34A.34.34 0 0020.66 3zM16.75 17l-2.42-3.57L11 17H9.35l3.6-5.05L9.5 7h2.25l2.1 3.13L16 7h1.65l-3.44 4.88L18.65 17H16.75z"/>
+      </svg>
+    </a>
+
+  </div>
+
+  © {{ now|date:"Y" }} Jack Tate • Built with Django + Tailwind
+</footer>
+
+
+
 </body>
 </html>
