@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2b6e1a-6d32-41ff-846e-7bd2d29869bc" name="Changes" comment="added requirements.txt">
+    <list default="true" id="de2b6e1a-6d32-41ff-846e-7bd2d29869bc" name="Changes" comment="modified database settings to use .env&#10;added the dj-database url from pip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codeCadCoffee/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/codeCadCoffee/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767909521978</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="modified database settings to use .env&#10;added the dj-database url from pip">
+      <option name="closed" value="true" />
+      <created>1774899162177</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1774899162177</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -142,6 +148,7 @@
     <MESSAGE value="Create a core app for homepage and other non sub folder content" />
     <MESSAGE value="added styling with tailwind,&#10;created base.html&#10;removed about me sections&#10;added post list page&#10;added post detail page" />
     <MESSAGE value="added requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added requirements.txt" />
+    <MESSAGE value="modified database settings to use .env&#10;added the dj-database url from pip" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified database settings to use .env&#10;added the dj-database url from pip" />
   </component>
 </project>
