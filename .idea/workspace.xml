@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2b6e1a-6d32-41ff-846e-7bd2d29869bc" name="Changes" comment="modified database settings to use .env&#10;added the dj-database url from pip">
+    <list default="true" id="de2b6e1a-6d32-41ff-846e-7bd2d29869bc" name="Changes" comment="added migration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codeCadCoffee/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/codeCadCoffee/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +138,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774899162177</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added mysql client">
+      <option name="closed" value="true" />
+      <created>1774900306393</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1774900306393</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added migration">
+      <option name="closed" value="true" />
+      <created>1774900545123</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1774900545123</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -149,6 +166,8 @@
     <MESSAGE value="added styling with tailwind,&#10;created base.html&#10;removed about me sections&#10;added post list page&#10;added post detail page" />
     <MESSAGE value="added requirements.txt" />
     <MESSAGE value="modified database settings to use .env&#10;added the dj-database url from pip" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified database settings to use .env&#10;added the dj-database url from pip" />
+    <MESSAGE value="added mysql client" />
+    <MESSAGE value="added migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="added migration" />
   </component>
 </project>
