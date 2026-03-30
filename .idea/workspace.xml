@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2b6e1a-6d32-41ff-846e-7bd2d29869bc" name="Changes" comment="Create a core app for homepage and other non sub folder content">
-      <change afterPath="$PROJECT_DIR$/static/core/banner_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/core/icon_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog/blogpost_list.html" afterDir="false" />
+    <list default="true" id="de2b6e1a-6d32-41ff-846e-7bd2d29869bc" name="Changes" comment="added requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codeCadCoffee/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/codeCadCoffee/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/static/css/dist/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static/css/dist/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +34,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.settings.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Programming/Projects/CodeCadCoffee",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Programming\Projects\CodeCadCoffee\static\core" />
@@ -105,7 +99,39 @@
       <option name="project" value="LOCAL" />
       <updated>1752180386560</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added styling with tailwind,&#10;created base.html&#10;removed about me sections&#10;added post list page&#10;added post detail page">
+      <option name="closed" value="true" />
+      <created>1753220499553</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753220499553</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added requirements.txt">
+      <option name="closed" value="true" />
+      <created>1767909452530</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1767909452530</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added requirements.txt">
+      <option name="closed" value="true" />
+      <created>1767909463815</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1767909463815</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added requirements.txt">
+      <option name="closed" value="true" />
+      <created>1767909521978</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1767909521978</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -114,6 +140,8 @@
     <MESSAGE value="Initial Commit created env file for secrets" />
     <MESSAGE value="Created initial classes and post detail view along with form for comments" />
     <MESSAGE value="Create a core app for homepage and other non sub folder content" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create a core app for homepage and other non sub folder content" />
+    <MESSAGE value="added styling with tailwind,&#10;created base.html&#10;removed about me sections&#10;added post list page&#10;added post detail page" />
+    <MESSAGE value="added requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="added requirements.txt" />
   </component>
 </project>
